@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-container{
+
+}
+
+.main-container__header,
+.main-container__menu,
+.main-container__orange{
+    position: fixed;
+    z-index: 9999;
+}
+
+.main-container__header{
+    top: 0;
+    left: 0;
+    background-color: #727eb2;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+.main-container__menu{
+    top: 50px;
+    left: 0;
+    width: 50px;
+    height: calc(100vh - 50px);
+    background-color: #37beaf;
+    transition: 0.3s;
+}
+
+.main-container__menu__open{
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: -50px;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+.main-container__content{
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    width: calc(60% - 90px);
+    color: #37beaf;
+    overflow: hidden;
+}
+
+.main-container__content img{
+    display: block;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.main-container__content__map{
+    overflow:hidden;
+    position:relative;
+    height: 450px;
+    margin-left:-20px;
+    width: calc(100% + 40px);
+}
+
+.main-container__content__map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    
+}
+
+.main-container__orange{
+    top: 50px;
+    right: 0;
+    width: 40%;
+    height: calc(100vh - 50px);
+    background-color: #fa895f;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-container__menu{
+        left: -50px;
+        height: 300px;
+    }
+    
+    .main-container__menu__open{
+        display: block;
+    }
+
+    .main-container__content{
+        padding: 60px;
+        margin: 0;
+        width: calc(100% - 120px);
+    }
+    .main-container__orange{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    
+    .main-container__content__map{
+        overflow:hidden;
+        position:relative;
+        height: 450px;
+        margin-left: -60px;
+        width: calc(100% + 120px);
+        margin-bottom: -60px;
+    }
+}
